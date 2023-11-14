@@ -38,7 +38,7 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun registerUser(username: String, password: String): Boolean {
-        val userId = dbHelper.insertUser(username, password)
+        val userId = dbHelper.insertUniqueUser(username, password)
         return userId != -1L
     }
 }
